@@ -1,0 +1,215 @@
+﻿body {
+    background: url('https://i.imgur.com/Nbi7bYI.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+.button {
+    border-radius: 8px;
+    background-color: #0094ff;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 10px;
+}
+
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+    .button:hover span {
+        padding-right: 25px;
+    }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+.headerText {
+    font-family: 'Comic Sans MS';
+}
+
+.tdClass {
+    font-family: 'Comic Sans MS';
+    color: #000000;
+}
+
+.imageResize {
+    max-width: 250px;
+    max-height: 300px;
+}
+
+.searchField{
+    border-radius:10px;
+}
+
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+}
+     .previous:hover{
+    color:yellow;
+   }
+.next {
+    background-color: #4CAF50;
+    color: white;
+}
+    .next:hover{
+        color:blue;
+    }
+
+.menuButton {
+    border-radius: 10px;
+    background-color: #cc66ff;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 10px;
+}
+
+    .menuButton span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+        .menuButton span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+    .menuButton:hover span {
+        padding-right: 25px;
+    }
+
+        .menuButton:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+.menuListItem {
+    font-family: 'Comic Sans MS';
+    color:blueviolet;
+    margin:20px;
+    font-size:21px;
+}
+    .menuListItem:hover {
+        color:#404040;
+    }
+
+.articleText {
+    font-style: italic;
+    color: #000000;
+}
+.numbersFont {
+    color: #009999
+}
+
+.dropdownItem {
+    background-color: #cc99ff;
+}
+.logo{
+    max-height:45px;
+    max-width:45px;
+}
+.navbarText {
+    font-family: 'Comic Sans MS';
+    font: larger;
+    color: white;
+    font-size: 16px;
+    max-width: 160px;
+    position: relative;
+    text-transform: uppercase;
+}
+    .navbarText:hover {
+        color: #00ccff;
+        transition: ease-in .3s;
+    }
+.navbarText-brand {
+    font-size: 25px;
+}
+
+.notes {
+    background-image: -webkit-linear-gradient(left, white 10px, transparent 10px), -webkit-linear-gradient(right, white 10px, transparent 10px), -webkit-linear-gradient(white 30px, #ccc 30px, #ccc 31px, white 31px);
+    background-image: -moz-linear-gradient(left, white 10px, transparent 10px), -moz-linear-gradient(right, white 10px, transparent 10px), -moz-linear-gradient(white 30px, #ccc 30px, #ccc 31px, white 31px);
+    background-image: -ms-linear-gradient(left, white 10px, transparent 10px), -ms-linear-gradient(right, white 10px, transparent 10px), -ms-linear-gradient(white 30px, #ccc 30px, #ccc 31px, white 31px);
+    background-image: -o-linear-gradient(left, white 10px, transparent 10px), -o-linear-gradient(right, white 10px, transparent 10px), -o-linear-gradient(white 30px, #ccc 30px, #ccc 31px, white 31px);
+    background-image: linear-gradient(left, white 10px, transparent 10px), linear-gradient(right, white 10px, transparent 10px), linear-gradient(white 30px, #ccc 30px, #ccc 31px, white 31px);
+    background-size: 100% 100%, 100% 100%, 100% 31px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    line-height: 31px;
+    font-family: Arial, Helvetica, Sans-serif;
+    padding: 8px;
+    width: 300px;
+    height: 500px;
+}
+
+    .notes:focus {
+        outline: none;
+    }
+
+body {
+    background-color: #eee;
+}

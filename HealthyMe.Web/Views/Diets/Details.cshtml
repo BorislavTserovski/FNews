@@ -1,0 +1,36 @@
+﻿@model DietFormModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2 class="headerText">Diet Details</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt class="headerText">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="articleText">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="headerText">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="articleText">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class="headerText">
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+        <dd>
+            <img src="data:image;base64,@System.Convert.ToBase64String(Model.Image)" class="imageResize" />
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+    <a asp-action="all" class="btn btn-primary">Back to List</a>
+</div>

@@ -1,0 +1,43 @@
+﻿@model PublishArticleFormModel
+@{
+    ViewData["Title"] = "Publish Article";
+}
+
+<h2 class="headerText">@ViewData["Title"]</h2>
+
+<div class="row">
+    <div class="col-md-8">
+        <form method="post" enctype="multipart/form-data">
+            <h4 class="headerText">Write a new article.</h4>
+            <hr />
+            <div class="form-group">
+                <label asp-for="Title" class="headerText"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.CategoryId, new { @class = "control-label col-md-2" })
+                <div class="dropdown col-sm-4">
+                    @Html.DropDownListFor(m => m.CategoryId,
+             new SelectList(Model.Categories, "Id", "Name"),
+             new { @class = "btn btn-info col-sm-12" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Content" class="headerText"></label>
+                <textarea asp-for="Content" class="form-control notes" style="width:100%" rows="30"></textarea>
+                <span asp-validation-for="Content" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label headerText"></label>
+                <input type="file" name="file" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <input type="submit" class="btn btn-primary headerText" value="Publish" />
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
